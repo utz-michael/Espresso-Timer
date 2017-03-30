@@ -17,7 +17,7 @@ pinMode (3, INPUT_PULLUP);
 void loop() {
 if ( digitalRead(3) == false && ausgeloest == false ) {
   mySwitch.switchOn("11000", "10000");
-  delay(7000); //mahlgrad 4
+  delay(6500); //mahlgrad 4
   mySwitch.switchOff("11000", "10000");
   ausgeloest = 1;
   time = millis();
