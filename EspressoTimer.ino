@@ -17,7 +17,7 @@ ESP8266WebServer server(80);
 
 String webPage = "";
 
-int gpio0_pin = 2;
+int gpio0_pin = 14;
 int gpio2_pin = 0;
 
 unsigned long  tassen=0;
