@@ -164,8 +164,12 @@ if (digitalRead(gpio2_pin) == 0){
 if (trigger == 1 && digitalRead(gpio2_pin) == 1){ enabel = 1;}
 
 
-
-if ( tassen >= 1 && tassen <= 120 && enabel == 1 ){ 
+if ( tassen >= 1 && tassen <= 9 && enabel == 1 ){
+  tassen = 0;
+  trigger = 0;
+  enabel = 0;
+}
+if ( tassen >= 10 && tassen <= 120 && enabel == 1 ){ 
   digitalWrite(gpio0_pin,HIGH) ;
   Serial.println ("Single");
   delay ( EEPROM.read(0) * 100 );
